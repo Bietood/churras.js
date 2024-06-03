@@ -22,8 +22,8 @@ document.getElementById("formulario").addEventListener("submit", (evt) => {
     let cerveja = bebida * 2000;
     const cervejaTotal = cerveja / 1000;
 
-    document.getElementById("entradaBebida").textContent = adulto - bebida;
-    document.getElementById("entradaAdulto").textContent = adulto;
+    document.getElementById("entradaBebida").textContent = bebida;
+    document.getElementById("entradaAdulto").textContent = adulto - bebida;
     document.getElementById("entradaCrianca").textContent = crianca;
     document.getElementById("entradaCarne").textContent = carneTotal+ " kg";
     document.getElementById("entradaAcomp").textContent = acompTotal + " kg";
