@@ -13,6 +13,8 @@ document.getElementById("formulario").addEventListener("submit", (evt) => {
     const acompTotal = acomp / 1000;
     const aguaTotal = agua / 1000;
 
+   
+
     let bebeRefri = adulto - bebida;
 
     let refri = (bebeRefri * 500) + (crianca * 500);
@@ -20,12 +22,17 @@ document.getElementById("formulario").addEventListener("submit", (evt) => {
     let cerveja = bebida * 2000;
     const cervejaTotal = cerveja / 1000;
 
-    document.getElementById("entradaBebida").textContent = bebida;
-    document.getElementById("entradaAdulto").textContent = adulto - bebida;
+    document.getElementById("entradaBebida").textContent = adulto - bebida;
+    document.getElementById("entradaAdulto").textContent = adulto;
     document.getElementById("entradaCrianca").textContent = crianca;
     document.getElementById("entradaCarne").textContent = carneTotal+ " kg";
     document.getElementById("entradaAcomp").textContent = acompTotal + " kg";
     document.getElementById("entradaCerveja").textContent = cervejaTotal + " L";
     document.getElementById("entradaRefri").textContent = refriTotal + " L";
     document.getElementById("entradaAgua").textContent = aguaTotal + " L";
+
+    if ( adulto < bebida)
+    {
+        alert ("Número de adultos que bebem bebidas alcolicas maior que a quantidade total de adultos por favor digite a quantidade certa");
+    }
 });
